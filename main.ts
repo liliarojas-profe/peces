@@ -13,6 +13,8 @@ input.onButtonPressed(Button.A, function () {
             . . . . .
             `)
         basic.showNumber(pesca)
+        basic.pause(1000)
+        basic.clearScreen()
     } else {
         basic.showLeds(`
             # . . . #
@@ -21,10 +23,12 @@ input.onButtonPressed(Button.A, function () {
             . # . # .
             # . . . #
             `)
+        basic.pause(1000)
+        basic.clearScreen()
     }
 })
 input.onButtonPressed(Button.B, function () {
-    pesca += randint(0, 1)
+    pesca = randint(0, 1)
     radio.sendNumber(pesca)
     if (pesca > 0) {
         basic.showLeds(`
@@ -35,6 +39,8 @@ input.onButtonPressed(Button.B, function () {
             . . . . .
             `)
         basic.showNumber(pesca)
+        basic.pause(1000)
+        basic.clearScreen()
     } else {
         basic.showLeds(`
             # . . . #
@@ -43,8 +49,13 @@ input.onButtonPressed(Button.B, function () {
             . # . # .
             # . . . #
             `)
+        basic.pause(1000)
+        basic.clearScreen()
     }
 })
+/**
+ * Código de los pescadores
+ */
 let pesca = 0
 radio.setGroup(1)
 pesca = 0
