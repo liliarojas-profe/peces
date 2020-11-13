@@ -24,7 +24,7 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 input.onButtonPressed(Button.B, function () {
-    pesca = randint(0, 1)
+    pesca += randint(0, 1)
     radio.sendNumber(pesca)
     if (pesca > 0) {
         basic.showLeds(`
